@@ -31,6 +31,25 @@ fi
 
 # ------------------------------------------------
 # ------------------------------------------------
+# --- Check to see if ST3 is running
+# ------------------------------------------------
+
+declare TEST_IF_ST_RUNNING=$(pidof sublime_text | wc -w)
+# Returns 1 if the process is running, or 0 if not
+# echo TEST_IF_ST_RUNNING=$TEST_IF_ST_RUNNING
+if [ $TEST_IF_ST_RUNNING -eq 1 ]; then
+    echo --------------------------------------------------------------
+    echo "Sublime Text 3 is currently running."
+    echo "Please close ST3 before updating the software."
+    echo --------------------------------------------------------------
+    exit
+else
+    echo "Sublime Text is currently not running."
+    echo "Continue with the installation."
+fi
+
+# ------------------------------------------------
+# ------------------------------------------------
 # --- Test sudo
 # ------------------------------------------------
 # This script uses the "sudo" command.
