@@ -65,9 +65,11 @@ echo CAN_I_RUN_SUDO=$CAN_I_RUN_SUDO
 if [ ${CAN_I_RUN_SUDO} == "true" ]; then
     echo "I can run the sudo command"
 else
+    echo --------------------------------------------------------------
     echo "I can't run the sudo command."
     echo "This script requires sudo privileges."
     echo "The script will now teminate ...."
+    echo --------------------------------------------------------------
     exit
 fi
 
@@ -260,7 +262,9 @@ fi
 read -p "Do you really want to install Sublime Text 3 (Build ${BUILD}, x${BITS}) in \"${TARGET}\"? [Y/n]: " CONFIRM
 CONFIRM=$(echo "${CONFIRM}" | tr [a-z] [A-Z])
 if [[ "${CONFIRM}" = 'N' ]] || [[ "${CONFIRM}" = 'NO' ]]; then
+    echo --------------------------------------------------------------
     echo "Aborted!"
+    echo --------------------------------------------------------------
     exit
 fi
 
