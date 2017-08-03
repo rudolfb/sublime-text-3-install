@@ -292,7 +292,7 @@ fi
 
 cd "$TEMPDIRECTORY"
 
-Download the installation file, and unpack the file into the /tmp directory.
+# Download the installation file, and unpack the file into the /tmp directory.
 echo "Downloading Sublime Text 3 ..."
 curl -L "${URL}" | tar -xjC ${TEMPDIRECTORY}
 
