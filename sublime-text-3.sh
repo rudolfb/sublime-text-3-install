@@ -8,8 +8,8 @@
 # OPTIONS
 #
 #   -h, --help    Displays this help message.
-#   -d, --dev     Install the dev version
-#   -s, --stable  Install the stable version (default)
+#   -d, --dev     Install the dev version (default)
+#   -s, --stable  Install the stable version
 #
 # Report bugs to Rudolf Bargholz <https://github.com/rudolfb/sublime-text-3-install>
 
@@ -131,7 +131,7 @@ declare PARAM_TARGET=""
 declare TARGET="${1:-/opt}"
 declare BUILD="${2}"
 declare BITS
-declare DEV_OR_STABLE="stable"
+declare DEV_OR_STABLE="dev"
 declare JSON
 
 declare CURRENT_SUBL_LINK=""
@@ -172,7 +172,7 @@ else
         PARAM_TARGET="${2}"
         BUILD="${3}"
     else
-        DEV_OR_STABLE="stable"
+        DEV_OR_STABLE="dev"
         TARGET="${1:-/opt}"
         PARAM_TARGET="${1}"
         BUILD="${2}"
@@ -259,14 +259,14 @@ fi
 # --- Y/N continue installation
 # ------------------------------------------------
 
-read -p "Do you really want to install Sublime Text 3 (Build ${BUILD}, x${BITS}) in \"${TARGET}\"? [Y/n]: " CONFIRM
-CONFIRM=$(echo "${CONFIRM}" | tr [a-z] [A-Z])
-if [[ "${CONFIRM}" = 'N' ]] || [[ "${CONFIRM}" = 'NO' ]]; then
-    echo --------------------------------------------------------------
-    echo "Aborted!"
-    echo --------------------------------------------------------------
-    exit
-fi
+# read -p "Do you really want to install Sublime Text 3 (Build ${BUILD}, x${BITS}) in \"${TARGET}\"? [Y/n]: " CONFIRM
+# CONFIRM=$(echo "${CONFIRM}" | tr [a-z] [A-Z])
+# if [[ "${CONFIRM}" = 'N' ]] || [[ "${CONFIRM}" = 'NO' ]]; then
+#     echo --------------------------------------------------------------
+#     echo "Aborted!"
+#     echo --------------------------------------------------------------
+#     exit
+# fi
 
 # ------------------------------------------------
 # ------------------------------------------------
