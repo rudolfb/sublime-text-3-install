@@ -196,7 +196,7 @@ fi
 # Build the URL for the file that needs to be downloaded.
 URL=$(printf "${URL_FORMAT}" "${BUILD}" "${BITS}")
 
-if [ "${DEBUG_ECHO}" == "debug" ]; then
+# if [ "${DEBUG_ECHO}" == "debug" ]; then
     echo DEV_OR_STABLE=$DEV_OR_STABLE
     echo TARGET=$TARGET
     echo PARAM_TARGET=$PARAM_TARGET
@@ -206,7 +206,7 @@ if [ "${DEBUG_ECHO}" == "debug" ]; then
     echo JSON=$JSON
     echo CWD=$CWD
     echo ...
-fi
+# fi
 
 # ------------------------------------------------
 # ------------------------------------------------
