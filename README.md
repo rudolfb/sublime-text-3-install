@@ -1,3 +1,11 @@
+# Obsolete
+
+Someone reported that this script deleted their /usr/bin directory, so please be careful, if you do want to use this script, to check your parameters. After I wrote this script Sublime Text published packages which make the installation and update of ST3 much easier:
+
+https://www.sublimetext.com/docs/3/linux_repositories.html
+
+-------------------
+
 # sublime-text-3-install
 Shell script to install/update Sublime Text 3
 
